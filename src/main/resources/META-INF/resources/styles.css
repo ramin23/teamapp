@@ -1,0 +1,61 @@
+/* Farben/Abstände aus Figma hier zentral als Variablen pflegen */
+html {
+  --lumo-primary-color: #2563eb;
+  --lumo-border-radius-m: 8px;
+  --app-card-border: 1.5px solid #1f2937;
+}
+
+.view-title { font-size: 1.4rem; margin: 0 auto; padding: var(--lumo-space-s); }
+
+.screen { max-width: 420px; margin: 0 auto; gap: var(--lumo-space-s); }
+
+.card { border: var(--app-card-border); border-radius: 10px; }
+.card-title { margin: 0; font-size: 1.1rem; }
+
+.stat-card {
+  flex: 1; display: flex; flex-direction: column;
+  border: 1px solid var(--lumo-contrast-30pct); border-radius: 8px;
+  padding: var(--lumo-space-s); background: var(--lumo-contrast-5pct);
+}
+.stat-label { font-size: var(--lumo-font-size-xs); color: var(--lumo-secondary-text-color); }
+.stat-value { font-size: var(--lumo-font-size-l); font-weight: 700; }
+
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--lumo-space-s); width: 100%; }
+
+.rueckmeldung-summary { border: 1px solid var(--lumo-contrast-30pct); border-radius: 8px; padding: var(--lumo-space-xs); }
+.rueckmeldung-spalte { display: flex; flex-direction: column; align-items: center; }
+
+.distanz-name { width: 6rem; font-style: italic; font-weight: 600; }
+.distanz-bar { --lumo-primary-color: #ef4444; height: 10px; }
+.distanz-wert { width: 3.5rem; text-align: right; font-weight: 600; font-size: var(--lumo-font-size-s); }
+
+.hinweis { font-size: var(--lumo-font-size-s); color: var(--lumo-secondary-text-color); }
+.geraet-status { border: 1px solid var(--lumo-contrast-50pct); border-radius: 8px; padding: var(--lumo-space-xs) var(--lumo-space-s); text-align: center; }
+
+.fab-row { display: flex; justify-content: center; width: 100%; }
+.fab-row vaadin-button { border-radius: 999px; }
+
+.bottom-nav vaadin-tab { flex: 1; justify-content: center; }
+
+/* ---- Rahmen: Titel oben, Inhalt scrollt, Navigation unten ---- */
+html, body { height: 100%; margin: 0; }
+.app-frame { display: flex; flex-direction: column; height: 100vh; max-width: 420px; margin: 0 auto;
+  border-left: 1px solid var(--lumo-contrast-10pct); border-right: 1px solid var(--lumo-contrast-10pct); }
+.view-title { text-align: center; border-bottom: 2px solid #1f2937; }
+.app-content { flex: 1; overflow-y: auto; }
+.bottom-nav { display: flex; justify-content: space-around; border-top: 2px solid #1f2937; padding: var(--lumo-space-s) 0; }
+.bottom-nav a { color: var(--lumo-secondary-text-color); padding: var(--lumo-space-xs) var(--lumo-space-m); }
+.bottom-nav a[highlight] { color: var(--lumo-primary-color); }   /* aktive Seite */
+.bottom-nav vaadin-icon { width: 28px; height: 28px; }
+
+.distanz-name { white-space: nowrap; }
+.aktionen vaadin-button { flex: 1 1 0; min-width: 0; white-space: normal; height: auto; min-height: var(--lumo-size-l); }
+.fab { --lumo-primary-color: #1f2937; }
+.aktionen vaadin-button::part(label) { white-space: normal; line-height: 1.2; }
+.nav-platzhalter { color: var(--lumo-disabled-text-color); padding: var(--lumo-space-xs) var(--lumo-space-m); }
+
+/* Trainingsvorschlag */
+.uebung-zeile { border-top: 1px solid var(--lumo-contrast-10pct); padding: var(--lumo-space-s) 0; }
+.uebung-tag { font-weight: 700; width: 2.2rem; flex-shrink: 0; padding-top: 2px; }
+.uebung-name { font-weight: 600; }
+.app-content { overflow-x: hidden; }
